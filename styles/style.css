@@ -1,0 +1,288 @@
+:root {
+    --color-background: white;
+    --color-text-one: black;
+}
+
+body {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    z-index: 2;
+    background-color: var(--color-background);
+    color: var(--color-text-one);
+    padding: .5em .2em;
+    right: 0;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: .75em 0 0 .75em;
+
+    & label {
+        padding: .75em;
+    }
+
+    /* !! ChatGPT gevraagd hoe ik de kleur van de radiobutton aan kon passen */
+    & input[type="checkbox"] {
+        accent-color: var(--color-text-one);
+        margin: .5em 1em;
+    }
+}
+
+
+.is-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.is-disabled input {
+    pointer-events: none;
+}
+
+
+
+
+
+.section-weeklynerds-c,
+.section-ownwork-m,
+.section-learninggoals-y,
+.section-reflection-k,
+.section-cm,
+.section-cy,
+.section-ck,
+.section-my,
+.section-mk,
+.section-yk {
+    display: none;
+}
+
+/* MARK: CHECKBOXES VALUES
+/* -------- SELECT SECTION --------  */
+html:has([value="weeklynerds"]:checked) {
+    --weeklynerds: true;
+}
+
+html:has([value="work"]:checked) {
+    --work: true;
+}
+
+html:has([value="goals"]:checked) {
+    --goals: true;
+}
+
+html:has([value="reflection"]:checked) {
+    --reflection: true;
+}
+
+/* -------- SELECT 2 SECTIONS --------  */
+/* CM */
+html:has([value="weeklynerds"]:checked):has([value="work"]:checked) {
+    --weeklynerds-work: true;
+}
+
+/* CY */
+html:has([value="weeklynerds"]:checked):has([value="goals"]:checked) {
+    --weeklynerds-goals: true;
+}
+
+/* CK */
+html:has([value="weeklynerds"]:checked):has([value="reflection"]:checked) {
+    --weeklynerds-reflection: true;
+}
+
+/* MY */
+html:has([value="work"]:checked):has([value="goals"]:checked) {
+    --work-goals: true;
+}
+
+/* MK */
+html:has([value="work"]:checked):has([value="reflection"]:checked) {
+    --work-reflection: true;
+}
+
+/* YK */
+html:has([value="goals"]:checked):has([value="reflection"]:checked) {
+    --goals-reflection: true;
+}
+
+
+
+
+/* MARK: CONTAINER QUERIES
+/* -------- WEEKLY NERDS --------  */
+@container style(--weeklynerds:true) {
+    .section-intro {
+        display: none;
+    }
+
+    .section-weeklynerds-c {
+        display: block;
+
+        height: 100svh;
+        background-color: cornflowerblue;
+    }
+}
+
+/* -------- OWN WORK --------  */
+@container style(--work:true) {
+    .section-intro {
+        display: none;
+    }
+
+    .section-ownwork-m {
+        display: block;
+
+        height: 100svh;
+        background-color: hotpink;
+    }
+}
+
+/* -------- LEARNING GOALS --------  */
+@container style(--goals:true) {
+    .section-intro {
+        display: none;
+    }
+
+    .section-learninggoals-y {
+        display: block;
+
+        height: 100svh;
+        background-color: yellow;
+    }
+}
+
+/* -------- REFLECTION --------  */
+@container style(--reflection:true) {
+    .section-intro {
+        display: none;
+    }
+
+    .section-reflection-k {
+        display: block;
+
+        height: 100svh;
+        background-color: gray;
+    }
+}
+
+/* -------- CYAN AND MAGENTA --------  */
+@container style(--weeklynerds-work:true) {
+    .section-intro {
+        display: none;
+    }
+
+    .section-cm {
+        display: block;
+
+        height: 100svh;
+        background-color: violet;
+    }
+
+    .section-weeklynerds-c,
+    .section-ownwork-m {
+        display: none;
+    }
+}
+
+/* -------- CYAN AND YELLOW --------  */
+@container style(--weeklynerds-goals:true) {
+    .section-intro {
+        display: none;
+    }
+
+    .section-cy {
+        display: block;
+
+        height: 100svh;
+        background-color: darkseagreen;
+    }
+
+    .section-weeklynerds-c,
+    .section-learninggoals-y {
+        display: none;
+    }
+}
+
+/* -------- CYAN AND BLACK --------  */
+@container style(--weeklynerds-reflection:true) {
+    .section-intro {
+        display: none;
+    }
+
+    .section-cy {
+        display: block;
+
+        height: 100svh;
+        background-color: blue;
+    }
+
+    .section-weeklynerds-c,
+    .section-reflection-k {
+        display: none;
+    }
+}
+
+/* -------- MAGENTA AND YELLOW --------  */
+@container style(--work-goals:true) {
+    .section-intro {
+        display: none;
+    }
+
+    .section-cy {
+        display: block;
+
+        height: 100svh;
+        background-color: orange;
+    }
+
+    .section-ownwork-m,
+    .section-learninggoals-y {
+        display: none;
+    }
+}
+
+/* -------- MAGENTA AND BLACK --------  */
+@container style(--work-reflection:true) {
+    .section-intro {
+        display: none;
+    }
+
+    .section-cy {
+        display: block;
+
+        height: 100svh;
+        background-color: darkmagenta;
+    }
+
+    .section-ownwork-m,
+    .section-reflection-k {
+        display: none;
+    }
+}
+
+/* -------- YELLOW AND BLACK --------  */
+@container style(--goals-reflection:true) {
+    .section-intro {
+        display: none;
+    }
+
+    .section-cy {
+        display: block;
+
+        height: 100svh;
+        background-color: gold;
+    }
+
+    .section-learninggoals-y,
+    .section-reflection-k {
+        display: none;
+    }
+}
