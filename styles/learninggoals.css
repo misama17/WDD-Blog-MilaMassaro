@@ -21,7 +21,7 @@
         width: 500px;
         aspect-ratio: 1;
         border-radius: 50%;
-        mix-blend-mode: multiply;
+        mix-blend-mode: difference;
 
         transform: translate(calc(var(--x, 0) * 1px + var(--repel-x, 0) * 1px),
                 calc(var(--y, 0) * 1px + var(--repel-y, 0) * 1px));

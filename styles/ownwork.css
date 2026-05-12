@@ -1,0 +1,239 @@
+/* -------- OWN WORK --------  */
+@container style(--work:true) {
+    .section-ownwork-m {
+        overflow-x: clip;
+
+        background-color: #1e1e1e;
+        color: #e94b5f;
+    }
+
+    .work-container {
+        margin: 0 2em;
+        row-gap: 0;
+
+        /* dynamic view height: houdt rekening met de balkjes op een iPhone   */
+        height: 100dvh;
+
+        display: grid;
+        place-items: center;
+
+        grid-template-rows: auto;
+
+        grid-template-areas:
+            "animatie animatie"
+            "button1  button2"
+        ;
+    }
+
+    .work-container ul {
+        --size: min(40vw, 15em);
+        --extra: 0;
+
+        padding: 0;
+        margin: 5em;
+        list-style-type: '';
+
+        display: grid;
+        grid-area: animatie;
+
+        perspective: 40em;
+
+        /* Zorgt ervoor dat de kaartjes/divs niet ineens ervoor komen te draaien. */
+        transform-style: preserve-3d;
+
+    }
+
+
+    .work-container ul li {
+        /*  Je plaatst alles in dezelfde grid, dus op elkaar.  */
+        grid-area: 1/1;
+        /*  Zowel op parent als op child grid (ul en li). Zo komt het achter elkaar te draaien.  */
+        display: grid;
+
+        transform:
+            rotateY(calc(1turn / sibling-count() * sibling-index() + 1turn / sibling-count() * var(--extra, 0))) translateZ(calc(var(--size) * 1.1));
+        transition: .5s;
+
+        transform-style: preserve-3d;
+
+    }
+
+
+    .work-container ul li>div {
+        grid-area: 1/1;
+        pointer-events: none;
+
+        width: var(--size);
+        aspect-ratio: 1/1.5;
+
+        /* 	background-image:linear-gradient(45deg, silver, whitesmoke); */
+        background-color: gainsboro;
+        border-radius: 5px;
+
+        /*  Hier zorg je ervoor dat aan de voorkant de voorkant te zien is en aan de achterkant de achterkant.  */
+        backface-visibility: hidden;
+
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+
+        &:nth-of-type(2) {
+            rotate: y .5turn;
+            background-color: dimgray;
+        }
+    }
+
+
+
+
+
+    .work-previous,
+    .work-next {
+        appearance: none;
+        border-radius: 50%;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: white;
+
+        transition: 1s ease;
+
+        &:nth-of-type(1) {
+            grid-area: button1;
+        }
+
+        &:nth-of-type(2) {
+            grid-area: button2;
+        }
+
+        &>svg {
+            height: 4em;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+
+
+
+
+
+    .div-css {
+        height: 100%;
+        width: 100%;
+        padding: .5em;
+        transform: translateZ(0);
+
+        /*  Chatgpt: hoe maak ik alle tekst in de div .div-css een grootte op basis van de grootte van de div?  */
+        container-type: inline-size;
+        gap: .25em;
+
+        background-color: rgb(250, 250, 250);
+        border-radius: 10px;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 15% repeat(3, 1fr) 5%;
+
+        & p:nth-of-type(1) {
+            grid-area: 1 / 2 / 2 / 5;
+            align-self: center;
+            text-transform: uppercase;
+            font-size: 3cqw;
+        }
+
+        & p:nth-of-type(2) {
+            grid-area: 4 / 1 / 5 / 4;
+            text-transform: uppercase;
+            font-size: 3cqw;
+            z-index: 10;
+        }
+
+        & p:nth-of-type(3) {
+            grid-area: 5 / 1 / 5 / 5;
+            text-transform: uppercase;
+            font-size: 3cqw;
+        }
+
+        & .course-number {
+            margin: 0;
+            font-size: 15cqw;
+            grid-area: 1 / 1 / 2 / 2;
+            align-self: center;
+            justify-self: start;
+        }
+
+        & .course-title {
+            font-size: 15cqw;
+            line-height: .85;
+            grid-area: 3 / 1 / 3 / 4;
+            margin: 0;
+            align-self: center;
+            text-transform: uppercase;
+            z-index: 10;
+            text-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+
+            & span {
+                font-size: 20cqw;
+                display: block;
+            }
+        }
+
+        & .iframe-container {
+            grid-area: 2 / 2 / 5 / 6;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            transform: none !important;
+
+            & .iframe-css {
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                pointer-events: auto;
+                touch-action: auto;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+
+
+                border-radius: 5px;
+                background: rgba(255, 255, 255, 0.2);
+
+
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+
+.h1 {
+    font-size: clamp(1.5em, 6vw, 4em);
+    margin: 1em 0 2em 0;
+    text-align: center;
+}
+
+.tijdelijke-link {
+    color: hotpink;
+}
+
+.ownwork-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+
+    width: 100vw;
+    height: 100svh;
+}
+
+.iframe-m {
+    width: 1440px;
+    height: 900px;
+}
