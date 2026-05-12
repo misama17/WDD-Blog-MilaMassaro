@@ -1,0 +1,36 @@
+.speaker {
+  display: flex;
+}
+
+.speaker-name {
+  padding: 1em;
+  width: 40vw;
+  
+  position: relative;
+}
+
+.speaker-sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.speaker-content {
+  padding: 3em 1em;
+  width: 60vw;
+  height: max-content;
+}
+
+
+.speaker:nth-child(odd) .speaker-content {
+  background: cornflowerblue;
+}
+
+.speaker:nth-child(even) .speaker-content {
+  background: rgb(31, 31, 96);
+  color: rgb(157, 182, 228);
+}

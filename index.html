@@ -1,89 +1,940 @@
 <!DOCTYPE html>
 <html lang="en">
-	
-<head>
-	<meta charset="UTF-8">
-	<meta name="author" content="MilaMassaro">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-  <link rel="icon" type="image/svg+xml" href="">
-	
-	<link href="./styles/style.css" rel="stylesheet">
-  <script defer src="./scripts/script.js"></script>
 
-  <title>Meesterschap Blog</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="MilaMassaro">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/svg+xml" href="">
+
+    <link href="./styles/style.css" rel="stylesheet">
+    <link href="./styles/learninggoals.css" rel="stylesheet">
+    <link href="./styles/weeklynerds.css" rel="stylesheet">
+
+    <script defer src="./scripts/script.js"></script>
+    <script defer src="./scripts/learninggoals.js"></script>
+    <script defer src="./scripts/weeklynerds.js"></script>
+
+    <title>Meesterschap Blog</title>
 </head>
 
 <body>
 
-<main>
-    <form>
-        <div>
-          <label><input type="checkbox" value="weeklynerds" name="section-c" checked>C</label>
-        </div>
-        
-        <div>
-          <label><input type="checkbox" value="work" name="section-m">M</label>
-        </div>
+    <main>
+        <!-- CHECKBOXE -> container styles -->
+        <form>
+            <div>
+                <label><input type="checkbox" value="weeklynerds" name="section-c" checked>C</label>
+            </div>
 
-        <div>
-          <label><input type="checkbox" value="goals" name="section-y" checked>Y</label>
-        </div>
-        
-        <div>
-          <label><input type="checkbox" value="reflection" name="section-k">K</label>
-        </div>
-    </form>
+            <div>
+                <label><input type="checkbox" value="work" name="section-m">M</label>
+            </div>
 
-    <!-- INTRO -->
-    <section class="section-intro">
-        <h1>Meesterschapsblog</h1>
-        <p>Een gelaagd leerproces</p>
-    </section>
+            <div>
+                <label><input type="checkbox" value="goals" name="section-y" checked>Y</label>
+            </div>
+
+            <div>
+                <label><input type="checkbox" value="reflection" name="section-k">K</label>
+            </div>
+        </form>
+
+        <!-- INTRO -->
+        <!-- None selected -->
+        <section class="section-intro">
+            <h1>Meesterschapsblog</h1>
+            <p>Een gelaagd leerproces</p>
+        </section>
 
 
-    <!-- ONE SELECTED -->
-    <section class="section-weeklynerds-c">
-        <h2>Weekly Nerds</h2>
-    </section>
+        <!-- ONE SELECTED -->
+        <!-- Weekly nerds -->
+        <section class="section-weeklynerds-c">
+            <section class="speaker">
+                <div class="speaker-name">
+                    <div class="speaker-sticky">
+                        <h2>Kilian Valkhof</h2>
+                        <p>Frontend developer en interactie designer</p>
+                        <p>Stop using JS for that: moving features from JS to CSS and HTML</p>
+                    </div>
+                </div>
 
-    <section class="section-ownwork-m">
-        <h2>Own Work</h2>
-    </section>
+                <div class="speaker-content">
+                    <p>
+                        Als je iets gaat bouwen moet je kijken hoe je het kan doen met de minst krachtige tool:
+                        <strong>HTML &gt; CSS &gt; JAVASCRIPT</strong>
+                    </p>
 
-    <section class="section-learninggoals-y">
-        <h2>Learning Goals</h2>
-    </section>
+                    <ul>
+                        <li>Javascript is imperatief: heel breekbaar. Je zegt precies wat de browser moet doen.</li>
+                        <li>HTML en CSS zijn declaratief: je geeft aan wat het eindresultaat moet zijn en de browser
+                            vult het in.</li>
+                        <li>Je moet dus meer moeite stoppen in Javascript en het kost de browser ook veel meer moeite.
+                        </li>
+                        <li>Maak het zo simpel mogelijk!</li>
+                    </ul>
 
-    <section class="section-reflection-k">
-        <h2>Reflection</h2>
-    </section>
-    
+                    <p><strong>Afspraak:</strong> alles wat je maakt op het web moet blijven werken.</p>
 
-    <!-- MORE SECTIONS TOGETHER -->
-    <section class="section-cm">
-        <h2>CM</h2>
-    </section>
+                    <p>Maar inmiddels zijn er veel toegankelijkere en betere manieren.</p>
 
-    <section class="section-cy">
-        <h2>CY</h2>
-    </section>
+                    <div class="code-block">
+                        &lt;label&gt;
+                        &lt;input type="checkbox" /&gt; My awesome feature
+                        &lt;/label&gt;
+                    </div>
 
-    <section class="section-ck">
-        <h2>CK</h2>
-    </section>
+                    <ul>
+                        <li>Ook als je op de tekst klikt doet de checkbox het</li>
+                        <li>input { appearance: none; }</li>
+                        <li>Je zorgt ervoor dat de browser het niet vormgeeft, maar dat je dit zelf kan doen.</li>
+                        <li>Wordt soort div qua rendering</li>
+                        <li>display: none; haalt het element weg. appearance: none; geeft aan
+                            dat hij niet ingevuld/vervangen wordt.</li>
+                        <li>Input achtergrond</li>
+                        <li>::before bolletje</li>
+                        <li>input::before { content: ' '; }</li>
+                        <li>Pseudo-element wordt alleen maar getoond als er tekstuele inhoud is.</li>
+                        <li>:checked { background-color: green; }</li>
+                        <li>:checked::before { transform: translateX(1rem); }</li>
+                    </ul>
 
-    <section class="section-my">
-        <h2>MY</h2>
-    </section>
+                    <h2>Focus styling</h2>
 
-    <section class="section-mk">
-        <h2>MK</h2>
-    </section>
+                    <ul>
+                        <li>Aangeven met welk element je interactie hebt als je je toetsenbord gebruikt.</li>
 
-    <section class="section-yk">
-        <h2>YK</h2>
-    </section>
-</main>
+                        <li>input:focus { outline-color: transparent; }</li>
+
+                        <li>Maar je moet dan wel iets terugplaatsen!</li>
+
+                        <li>input:focus-visible { outline: 2px solid dodgerblue; }</li>
+                    </ul>
+
+                    <h2>Safari</h2>
+
+                    <ul>
+                        <li>&lt;input type="checkbox" switch&gt;</li>
+                        <li>Maar nog niet op alle browsers</li>
+                    </ul>
+
+                    <h2>In-page transitions</h2>
+
+                    <div class="code-block">
+                        html {
+                        scroll-behavior: smooth;
+                        }
+                    </div>
+
+                    <ul>
+                        <li>Browser neemt al het werk uit je handen</li>
+                        <li>Browser kan rekening houden met hoe krachtig het apparaat is</li>
+                    </ul>
+
+                    <div class="code-block">
+                        window.scrollTo({ behavior: "smooth" });
+                    </div>
+
+                    <div class="code-block">
+                        @media (prefers-reduced-motion: no-preference) {
+                        html {
+                        scroll-behavior: smooth;
+                        }
+                        }
+                    </div>
+
+                    <ul>
+                        <li>Scroll margins bij fixed headers</li>
+                    </ul>
+
+                    <div class="code-block">
+                        #my-target {
+                        scroll-margin-top: 100px;
+                        }
+
+                        #my-target:target {
+                        outline: 10px solid deeppink;
+                        transition: 1s ease-in-out outline;
+                        }
+                    </div>
+
+                    <h2>Accordions and modals</h2>
+
+                    <div class="code-block">
+                        &lt;details open&gt;
+                        &lt;summary&gt;Title&lt;/summary&gt;
+                        &lt;p&gt;Tekst&lt;/p&gt;
+                        &lt;/details&gt;
+                    </div>
+
+                    <ul>
+                        <li>open attribute wordt live beheerd door de browser</li>
+                    </ul>
+
+                    <div class="code-block">
+                        summary::marker {
+                        font-size: 1.5em;
+                        content: '🥰';
+                        }
+
+                        [open] summary::marker {
+                        content: '🌶️';
+                        }
+                    </div>
+
+                    <div class="code-block">
+                        summary:hover {
+                        cursor: pointer;
+                        background: deeppink;
+                        }
+                    </div>
+
+                    <div class="code-block">
+                        &lt;dialog&gt;
+                        &lt;form method="dialog"&gt;
+                        &lt;h1&gt;Title&lt;/h1&gt;
+                        &lt;button&gt;sluit&lt;/button&gt;
+                        &lt;/form&gt;
+                        &lt;/dialog&gt;
+                    </div>
+
+                    <ul>
+                        <li>dialog wordt getoond via JavaScript of showModal()</li>
+                        <li>Wordt op de top layer getoond</li>
+                    </ul>
+
+                    <div class="code-block">
+                        dialog {
+                        @starting-style {
+                        transform: scale(0.8);
+                        }
+                        }
+                    </div>
+
+                    <h2>Form controls</h2>
+
+                    <div class="code-block">
+                        input,
+                        textarea {
+                        field-sizing: content;
+                        }
+                    </div>
+
+                    <ul>
+                        <li>Field is precies even groot als de content</li>
+                    </ul>
+
+                    <div class="code-block">
+                        &lt;select&gt;
+                        &lt;option&gt;Option 1&lt;/option&gt;
+                        &lt;option&gt;Option 2&lt;/option&gt;
+                        &lt;option&gt;Option 3&lt;/option&gt;
+                        &lt;/select&gt;
+                    </div>
+
+                    <div class="code-block">
+                        select,
+                        ::picker(select) {
+                        appearance: base-select;
+                        }
+                    </div>
+
+                    <ul>
+                        <li>Customizable select (Chrome)</li>
+                        <li>Picker = dropdown element</li>
+                    </ul>
+
+                    <div class="code-block">
+                        &lt;select&gt;
+                        &lt;button&gt;
+                        You chose:
+                        &lt;selectedcontent&gt;Fire&lt;/selectedcontent&gt;
+                        &lt;/button&gt;
+                        &lt;/select&gt;
+                    </div>
+
+                    <div class="code-block">
+                        :open::picker(select) {
+                        /* styles */
+                        }
+
+                        select option {
+                        /* styles */
+                        }
+                    </div>
+            </section>
+
+            <section class="speaker">
+                <div class="speaker-name">
+                    <div class="speaker-sticky">
+                        <h2>Peter-Paul Koch</h2>
+                        <p>Web developer, browser researcher and conference organisator</p>
+                        <p>De geschiedenis van browsers</p>
+                    </div>
+                </div>
+
+                <div class="speaker-content">
+                    <p>
+                        JavaScript is officieel geen onderdeel van de browser.
+                    </p>
+
+                    <ul>
+                        <li>De meeste browsers gebruiken de JavaScript engine van Google.</li>
+                        <li>Dus een andere engine dan de browser zelf.</li>
+                        <li>Dit is om JavaScript als programmeertaal te verbeteren.</li>
+                    </ul>
+
+                    <h2>DOM en AOM</h2>
+
+                    <p>
+                        De DOM verandert mee met wat je aanpast met JavaScript.
+                    </p>
+
+                    <p>
+                        AOM is bedoeld voor assistive technologies zoals screenreaders.
+                    </p>
+
+                    <ul>
+                        <li>Zelfde als DOM plus extra informatie</li>
+                        <li>Bijvoorbeeld aria-labels</li>
+                    </ul>
+
+                    <h2>Parsers</h2>
+
+                    <p>
+                        Een parser is een stukje programma dat een string neemt en deze interpreteert.
+                    </p>
+
+                    <ul>
+                        <li>Voor HTML, CSS en JS</li>
+                        <li>CSS wordt verwerkt via een CSS parser en daarna doorgegeven aan de style engine</li>
+                    </ul>
+
+                    <h2>Layout veranderingen</h2>
+
+                    <p>
+                        Kijk uit met veranderingen van de layout!
+                    </p>
+
+                    <ul>
+                        <li>Media queries zijn oké</li>
+                        <li>Verder liefst zoveel mogelijk vermijden</li>
+                        <li>Browser kan het wel, maar het is zwaar</li>
+                    </ul>
+
+                    <h2>Rendering engine</h2>
+
+                    <p>
+                        De rendering engine is in feite alles behalve de JS engine en de interface.
+                    </p>
+
+                    <ul>
+                        <li>Interface = waar dingen zich bevinden in de browser</li>
+                        <li>JavaScript vraagt de DOM of iets bestaat en past het daarna aan</li>
+                        <li>Grootste rendering engine: Blink (Chromium)</li>
+                        <li>Wordt gebruikt door Chrome, Edge, Opera, Vivaldi</li>
+                        <li>Ze interpreteren HTML, CSS en DOM op dezelfde manier</li>
+                    </ul>
+
+                    <p>
+                        (JS) Core maakt JavaScript een programmeertaal.
+                    </p>
+
+                    <h2>Render blocking</h2>
+
+                    <p>
+                        Render blocking betekent dat de browser wacht met het verder verwerken van HTML totdat andere
+                        zaken klaar zijn.
+                    </p>
+
+                    <ul>
+                        <li>HTML wordt eerst geparsed en geïnterpreteerd</li>
+                        <li>Grote JavaScript pas later uitvoeren</li>
+                        <li>Async en defer:</li>
+                        <ul>
+                            <li>Async: voert JS uit wanneer het klaar is, volgorde niet gegarandeerd</li>
+                            <li>Defer: eerst HTML verwerken, daarna JS</li>
+                        </ul>
+                        <li>Defer scripts vaak onderaan de HTML zetten</li>
+                        <li>Gebruik: script defer src of script async src</li>
+                        <li>CSS eerst, daarna HTML, daarna JavaScript</li>
+                    </ul>
+
+                    <h2>Backward compatibility</h2>
+
+                    <p>
+                        Alles wat een browser ooit heeft ondersteund moet hij voor altijd blijven ondersteunen.
+                    </p>
+
+                    <ul>
+                        <li>form.elements wordt nog steeds ondersteund</li>
+                        <li>frameset is vervangen door iframe</li>
+                    </ul>
+
+                    <h2>Geschiedenis van browsers</h2>
+
+                    <ul>
+                        <li>Allereerste webbrowser: WWW Browser</li>
+                        <li>Netscape (1994): eerste echte browser → Firefox (2004)</li>
+                        <li>Internet Explorer (1995): eerste gratis browser</li>
+                        <li>IE 5 Mac (2000): eerste browser voor Apple</li>
+                        <li>Konqueror (2000) → Safari (2003)</li>
+                        <li>WebKit is de rendering engine van Safari en open source gebleven</li>
+                        <li>Safari iOS (2007): eerste iPhone browser met touch events</li>
+                        <li>Chrome (2008): begon met WebKit, later Blink engine</li>
+                    </ul>
+
+                    <h2>IP-adres</h2>
+
+                    <p>
+                        Een IP-adres zorgt ervoor dat de browser weet waar hij naartoe moet op het internet.
+                    </p>
+
+                </div>
+            </section>
+
+            <section class="speaker">
+                <div class="speaker-name">
+                    <div class="speaker-sticky">
+                        <h2>Nils Binder</h2>
+                        <p>Frontend developer en interactie designer</p>
+                        <p>Stop using JS for that: moving features from JS to CSS and HTML</p>
+                    </div>
+                </div>
+
+                <div class="speaker-content">
+                    <p>
+                        9elements is gericht op communication design, web development en product development.
+                    </p>
+
+                    <h2>Figma gebruiken voor websites</h2>
+
+                    <p>
+                        Figma wordt gebruikt voor het maken van websites.
+                    </p>
+
+                    <ul>
+                        <li>Wat je in Figma doet komt vaak precies overeen met wat je in CSS zou doen</li>
+                        <li>Het kan dus helpen bij het ontwerpen van websites</li>
+                        <li>Auto layout in Figma is vergelijkbaar met flexbox in CSS</li>
+                    </ul>
+
+                    <p>
+                        Figma is (en was) een tool die de manier waarop we websites ontwerpen heeft veranderd.
+                    </p>
+
+                    <ul>
+                        <li>Alles wat je in Figma kunt maken, kun je ook op het web bouwen</li>
+                        <li>Er was een gevoel dat alle websites er hetzelfde uitzagen</li>
+                    </ul>
+
+                    <h2>Design principe</h2>
+
+                    <p>
+                        Bij het ontwerpen moet je kijken naar verhoudingen in plaats van pixels.
+                    </p>
+
+                    <ul>
+                        <li>Focus op de ratio tussen elementen</li>
+                        <li>Niet alleen op exacte pixelwaardes</li>
+                    </ul>
+
+                    <p>
+                        Video gebruikt veel data, maar door gebruik te maken van afbeeldingen in stop-motion kun je nog
+                        steeds een bewegend element maken dat een beetje op video lijkt.
+                    </p>
+
+                    <div class="code-block">
+                        /* stop-motion animation (instead of using video) */
+
+                        div {
+                        animation: stop-motion 3s steps(31, end) infinite;
+                        }
+                    </div>
+
+                    <ul>
+                        <li>In essentie is het een lange strip die over het scherm beweegt</li>
+                        <li>Door <strong>steps(31, end)</strong> springt de animatie van frame naar frame</li>
+                        <li>Daardoor krijg je een “stotterend” effect zoals stop-motion</li>
+                    </ul>
+
+                    <p>
+                        Before subgrid: je kon alleen direction en layout toepassen op de grid zelf → niet op nested
+                        elementen.
+                    </p>
+
+                    <p>
+                        Met subgrid kun je de rows en columns van een parent grid hergebruiken in een child element.
+                    </p>
+
+                    <ul>
+                        <li>Je “erft” als het ware de grid van de parent</li>
+                        <li>Handig voor consistente layouts in complexe interfaces</li>
+                    </ul>
+
+                    <h2>Voorbeeld en uitleg</h2>
+
+                    <p>
+                        Een uitgebreid voorbeeld van subgrid in een echte toepassing:
+                        <a
+                            href="https://9elements.com/blog/building-a-multi-stage-timetable-with-modern-css-using-grid-subgrid-round-and-mod/">
+                            Building a multi-stage timetable with CSS Grid Subgrid
+                        </a>
+                    </p>
+
+                    <p>
+                        Dit komt van 9elements, een bureau dat veel experimenteert met moderne CSS en webtechnieken.
+                    </p>
+
+                    <p>
+                        Nog een voorbeeld van subgrid in praktijk:
+                        <a href="https://www.bonamic.de/it-services/">
+                            Bonamic IT Services
+                        </a>
+                    </p>
+
+                    <p>
+                        Dit project gebruikt subgrid om complexe layouts consistenter op te bouwen.
+                    </p>
+
+                    <p>
+                        Met de :first-line selector kun je alleen de eerste regel van een tekst stylen.
+                        In dit voorbeeld kun je bijvoorbeeld de woorden op de eerste lijn een outline geven,
+                        zelfs wanneer je het scherm resized en de tekst opnieuw wordt verdeeld over meerdere regels.
+                    </p>
+
+                    <ul>
+                        <li>De eerste regel verandert dynamisch mee met de breedte van het scherm</li>
+                        <li>Je werkt dus niet met vaste regels, maar met visuele layout</li>
+                    </ul>
+
+                    <h2>Voorbeeldsite</h2>
+
+                    <p>
+                        ernst-co.com gebruikt dit soort technieken in hun design.
+                    </p>
+
+                    <h2>View Transitions</h2>
+
+                    <p>
+                        View Transitions worden gebruikt om vloeiende animaties te maken tussen pagina’s.
+                        In plaats van een harde page reload, animeert de browser de overgang automatisch.
+                    </p>
+
+                    <ul>
+                        <li>Bijvoorbeeld bij het wisselen van taal (Engels ↔ andere taal)</li>
+                        <li>De browser regelt de animatie zelf</li>
+                    </ul>
+
+                    <p>
+                        bonabry.de gebruikt veel view transitions in hun website.
+                    </p>
+
+                    <h2>View Transitions op één pagina</h2>
+
+                    <p>
+                        Je kunt view transitions ook op dezelfde pagina gebruiken om tussen twee states te animeren.
+                        Hiervoor heb je wel een beetje JavaScript nodig.
+                    </p>
+
+                </div>
+            </section>
+
+            <section class="speaker">
+                <div class="speaker-name">
+                    <div class="speaker-sticky">
+                        <h2>NL Design Systems</h2>
+                        <p>uitleg</p>
+                        <p>tekst</p>
+                    </div>
+                </div>
+
+                <div class="speaker-content">
+                    <h2>Opbouw van formulier: voorwaarden</h2>
+
+                    <ul>
+                        <li>Introductietekst</li>
+                        <ul>
+                            <li>Zeg erbij wat de gebruiker nodig heeft (bijvoorbeeld BSN)</li>
+                        </ul>
+
+                        <li>Gebruiker kan voor inzending de ingevoerde waardes controleren, wijzigen of ongedaan maken
+                        </li>
+
+                        <li>
+                            Na “volgende” of “verzenden” verschijnt een samenvatting van alle fouten
+                        </li>
+                    </ul>
+
+                    <h2>Introductietekst</h2>
+
+                    <ul>
+                        <li>Duur voor het invullen kan genoemd worden</li>
+                        <li>Maar dit verschilt sterk per gebruiker, dus vaak niet handig</li>
+                    </ul>
+
+                    <h2>Automatisch invullen</h2>
+
+                    <ul>
+                        <li>Dingen die vaker ingevuld moeten worden automatisch invullen</li>
+                        <li>Minder typefouten en prettiger voor de gebruiker</li>
+                    </ul>
+
+                    <h2>Verplichte velden</h2>
+
+                    <ul>
+                        <li>Duidelijk aangeven welke velden niet verplicht zijn</li>
+                        <li>Bespaart onnodige energie</li>
+                    </ul>
+
+                    <h2>Foutafhandeling</h2>
+
+                    <ul>
+                        <li>Lijst met fouten tonen na submit</li>
+                        <li>Linken naar het veld zodat gebruiker direct kan corrigeren</li>
+                        <li>Bovenaan of bij het veld zelf tonen (of allebei)</li>
+                        <li>Button pas activeren wanneer fouten opgelost zijn</li>
+                    </ul>
+
+                    <h2>Controlepagina</h2>
+
+                    <ul>
+                        <li>“Controleer uw gegevens” direct bewerkbaar maken</li>
+                        <li>Knoppen: opslaan en later verder, of stoppen met formulier</li>
+                    </ul>
+
+                    <h2>Bevestiging</h2>
+
+                    <ul>
+                        <li>Bevestiging dat alles goed is gegaan</li>
+                        <li>Wat zijn de vervolgstappen?</li>
+                        <li>Wat kan de gebruiker verwachten?</li>
+                        <li>Eventueel PDF download van inzending</li>
+                    </ul>
+
+                    <h2>Inhoud van formulier</h2>
+
+                    <ul>
+                        <li>Geen jargon of onduidelijke afkortingen gebruiken</li>
+                    </ul>
+
+                    <h2>Fouten in formulieren</h2>
+
+                    <ul>
+                        <li>Email herhalen is vaak onnodig</li>
+                        <li>Laat gebruikers liever inloggen zodat data bekend is</li>
+                        <li>Geslacht vragen is vaak niet nodig</li>
+                    </ul>
+
+                    <h2>Toegankelijkheid & touch targets</h2>
+
+                    <ul>
+                        <li>Componenten minimaal 44px x 44px</li>
+                        <li>Gebruik min-width en min-height: 44px</li>
+                    </ul>
+
+                    <h2>Foutweergave</h2>
+
+                    <ul>
+                        <li>Niet alleen een rand om input</li>
+                        <li>Ook duidelijke visuele markering naast veld</li>
+                    </ul>
+
+                    <h2>Design van formulieren</h2>
+
+                    <ul>
+                        <li>Buttons consistent en links uitgelijnd</li>
+                        <li>Voortgang tonen boven formulier</li>
+                        <li>Duidelijke stap-indicator</li>
+                        <li>Verzendstap expliciet maken</li>
+                        <li>Alle buttons overzichtelijk onderaan</li>
+                        <li>Labels boven invoervelden</li>
+                        <li>Verplicht/niet verplicht altijd tekstueel aangeven</li>
+                    </ul>
+
+                    <h2>Form flow</h2>
+
+                    <ul>
+                        <li>Logische volgorde aanhouden</li>
+                        <li>Hulp aanbieden (chat, telefoon, email)</li>
+                        <li>Hulp plaatsen in intro, footer en controlepagina</li>
+                    </ul>
+
+                    <h2>Labels en beschrijvingen</h2>
+
+                    <ul>
+                        <li>Uitleg niet in label zetten</li>
+                        <li>Label kort en duidelijk houden</li>
+                        <li>Gebruik aria-describedby voor extra uitleg</li>
+                        <li>Meerdere id’s kunnen gekoppeld worden</li>
+                    </ul>
+
+                    <h2>Makkelijk invullen</h2>
+
+                    <ul>
+                        <li>Knippen en plakken toestaan</li>
+                        <li>Bekende gegevens vooraf invullen</li>
+                        <li>Autocomplete gebruiken</li>
+                        <li>Goede spacing en 44px touch targets</li>
+                    </ul>
+
+                    <h2>Beschrijvingen</h2>
+
+                    <ul>
+                        <li>Uitleg boven formulier of sectie plaatsen</li>
+                        <li>Structuur: label → uitleg → fout → input</li>
+                    </ul>
+
+                    <h2>HTML & CSS details</h2>
+
+                    <ul>
+                        <li>bdi translate="no" voorkomt vertaling van gebruikersinput</li>
+                        <li>Gebruik inline-size en block-size in plaats van width/height</li>
+                        <li>Gebruik inline-start voor logische layout</li>
+                    </ul>
+
+                    <h2>Validatie</h2>
+
+                    <ul>
+                        <li>Regels vooraf duidelijk maken</li>
+                        <li>Uitleg over verplichte velden bovenaan</li>
+                        <li>Geen onnodige min/max restricties</li>
+                        <li>Foutmeldingen moeten uitleg geven</li>
+                    </ul>
+
+                    <h2>Focus & toegankelijkheid</h2>
+
+                    <ul>
+                        <li>Focus altijd duidelijk zichtbaar bij tabben</li>
+                        <li>Niet continu foutmeldingen tonen</li>
+                        <li>Foutmelding tonen op juist moment</li>
+                    </ul>
+
+                    <h2>Screenreaders</h2>
+
+                    <ul>
+                        <li>Gebruiker moet weten waar hij gebleven is</li>
+                        <li>Bevestiging na submit duidelijk laten voorlezen</li>
+                        <li>Positieve statusberichten automatisch laten voorlezen</li>
+                    </ul>
+
+                    <h2>Structuur</h2>
+
+                    <ul>
+                        <li>Form begint pas bij echte invoer (bijv. naam)</li>
+                        <li>Context en uitleg buiten het form-element plaatsen</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="speaker">
+                <div class="speaker-name">
+                    <div class="speaker-sticky">
+                        <h2>Johan Huijkman</h2>
+                        <p>uitlegg</p>
+                        <p>tekst</p>
+                    </div>
+                </div>
+
+                <div class="speaker-content">
+                    <h2>Wat moet je doen om een website toegankelijk te maken?</h2>
+
+                    <ol>
+                        <li>Perceivable</li>
+                        <li>Operable</li>
+                        <li>Understandable</li>
+                        <li>Robust</li>
+                    </ol>
+
+                    <p>
+                        → Web Content Accessibility Guidelines (WCAG)
+                    </p>
+
+                    <h2>Op- en aanmerkingen WCAG</h2>
+
+                    <ul>
+                        <li>
+                            Het is vooral gefocust op mensen met een visuele beperking, maar dit is maar een klein
+                            aandeel in mensen met beperkingen.
+                        </li>
+                        <li>
+                            De punten kunnen verschillend geïnterpreteerd worden.
+                        </li>
+                    </ul>
+
+                    <p>
+                        Als afbeeldingen decoratief zijn, dan kan de alt leeg blijven, omdat het niet belangrijk is voor
+                        de content.
+                    </p>
+
+                    <p>
+                        Soms zijn extra functies om het makkelijk te maken niet per se beter. Schermlezers hebben al
+                        veel functies ingebouwd.
+                    </p>
+
+                    <h2>Cookies</h2>
+
+                    <ul>
+                        <li>Staat gelijk bovenaan → kan je direct wegklikken</li>
+                        <li>Afhankelijk van de implementatie is het makkelijk of moeilijk om weg te klikken</li>
+                    </ul>
+
+                    <h2>Gebruikersonderzoek</h2>
+
+                    <h3>Martijn (slechtziend)</h3>
+
+                    <p><strong>Wat maakt het moeilijk?</strong></p>
+                    <ul>
+                        <li>Te lange teksten</li>
+                        <li>Knoppen zonder hover of focus states</li>
+                        <li>Cookie meldingen zonder scrollbaarheid</li>
+                        <li>Scrollen bij zoom → layout verspringt</li>
+                        <li>Sticky headers die in de weg zitten</li>
+                    </ul>
+
+                    <p><strong>Wat heeft hij nodig?</strong></p>
+                    <ul>
+                        <li>Korte en bondige tekst</li>
+                        <li>Duidelijke hover states</li>
+                        <li>Gerelateerde info dicht bij elkaar</li>
+                        <li>Schaalbaarheid en goed contrast</li>
+                        <li>Duidelijke focus indicators</li>
+                    </ul>
+
+                    <h3>Naduah (mobiliteit & prikkelgevoelig)</h3>
+
+                    <p><strong>Wat maakt het moeilijk?</strong></p>
+                    <ul>
+                        <li>Felle kleuren en drukke layouts</li>
+                        <li>Te veel informatie tegelijk</li>
+                        <li>Onduidelijke navigatie</li>
+                    </ul>
+
+                    <p><strong>Wat heeft zij nodig?</strong></p>
+                    <ul>
+                        <li>Rustige layouts</li>
+                        <li>Weinig of geen animaties</li>
+                        <li>Mogelijkheid om later terug te komen</li>
+                        <li>Dark mode</li>
+                    </ul>
+
+                    <h3>Guido (autisme)</h3>
+
+                    <p><strong>Wat maakt het moeilijk?</strong></p>
+                    <ul>
+                        <li>Visuele en audio prikkels</li>
+                        <li>Te veel informatie tegelijk</li>
+                        <li>Onduidelijke instructies</li>
+                    </ul>
+
+                    <p><strong>Wat heeft hij nodig?</strong></p>
+                    <ul>
+                        <li>Rustige en voorspelbare layouts</li>
+                        <li>Duidelijke instructies</li>
+                        <li>Structuur en overzicht</li>
+                    </ul>
+
+                    <h2>Wanneer haken mensen af?</h2>
+
+                    <ul>
+                        <li>Martijn: visuele projecten met kleine sliders en onduidelijke schaalbaarheid</li>
+                        <li>Naduah: geen mogelijkheid om rustig terug te komen of taken op te delen</li>
+                        <li>Guido: te veel visuele effecten en onverwachte bewegingen</li>
+                    </ul>
+
+                    <p>
+                        Er is een conflict tussen het doel van de website en het belang van de gebruiker.
+                        Bijvoorbeeld advertenties kunnen overprikkelend zijn, maar zijn wel belangrijk voor het
+                        businessmodel.
+                    </p>
+
+                    <h2>Wat ga ik bekijken bij mijn website (HCD)?</h2>
+
+                    <ul>
+                        <li>Website testen op 400% zoom</li>
+                        <li>Testen met screenreader</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <!-- Own work -->
+        <section class="section-ownwork-m">
+            <h2>Own Work</h2>
+        </section>
+
+        <!-- Learning goals -->
+        <section class="section-learninggoals-y">
+            <div class="goals-container">
+                <div class="goals-content">
+                    <div class="goals-y goals-one">
+                        <h2>Goal 1</h2>
+                        <p>Ik ga ontdekken of webdesign en development mijn toekomstige richting kan worden door te
+                            experimenteren met projecten en te kijken of het werk mij aanspreekt.</p>
+                    </div>
+
+                    <div class="goals-y goals-two">
+                        <h2>Goal 2</h2>
+                        <p>Ik kan een website ontwikkelen met een goede user experience door de behoeften van gebruikers
+                            te vertalen naar een duidelijke, toegankelijke en visueel aantrekkelijke website.</p>
+                    </div>
+
+                    <div class="goals-y goals-three">
+                        <h2>Goal 3</h2>
+                        <p>Ik ga leren hoe ik animaties kan maken en toepassen om websites visueel aantrekkelijker en
+                            unieker te maken met dynamische en interactieve elementen.</p>
+                    </div>
+                </div>
+
+                <div class="goals-balls">
+                    <div class="goals-ball"></div>
+                    <div class="goals-ball"></div>
+                    <div class="goals-ball"></div>
+                    <div class="goals-ball"></div>
+                    <div class="goals-ball"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Reflection -->
+        <section class="section-reflection-k">
+            <h2>Reflection</h2>
+        </section>
+
+
+        <!-- MORE SECTIONS TOGETHER -->
+        <!-- Weekly nerds and own work -->
+        <section class="section-cm">
+            <h2>CM</h2>
+        </section>
+
+        <!-- Weekly nerds and learning goals -->
+        <section class="section-cy">
+            <h2>CY</h2>
+        </section>
+
+        <!-- Weekly nerds and reflection -->
+        <section class="section-ck">
+            <h2>CK</h2>
+        </section>
+
+        <!-- Own work and learning goals -->
+        <section class="section-my">
+            <h2>MY</h2>
+        </section>
+
+        <!-- Own work and reflection -->
+        <section class="section-mk">
+            <h2>MK</h2>
+        </section>
+
+        <!-- Learning goals and reflection -->
+        <section class="section-yk">
+            <h2>YK</h2>
+        </section>
+    </main>
 
 </body>

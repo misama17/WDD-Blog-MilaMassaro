@@ -1,3 +1,23 @@
+/* ---------------- */
+/* MARK: Typography
+/* ---------------- */
+@font-face {
+    font-family: 'Instrument Regular';
+    src: url(../fonts/InstrumentSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Instrument Italic';
+    src: url(../fonts/InstrumentSerif-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url(../fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+
+
+
 :root {
     --color-background: white;
     --color-text-one: black;
@@ -5,17 +25,18 @@
 
 body {
     margin: 0;
+    overflow-x: clip;
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
 }
 
 h2 {
-    margin: 0;
+    font-family: 'Instrument Regular', serif;
 }
 
 
 form {
-    font-family: Arial, Helvetica, sans-serif;
     position: fixed;
-    z-index: 2;
+    z-index: 100;
     background-color: var(--color-background);
     color: var(--color-text-one);
     padding: .5em .2em;
@@ -125,9 +146,6 @@ html:has([value="goals"]:checked):has([value="reflection"]:checked) {
 
     .section-weeklynerds-c {
         display: block;
-
-        height: 100svh;
-        background-color: cornflowerblue;
     }
 }
 
@@ -153,10 +171,8 @@ html:has([value="goals"]:checked):has([value="reflection"]:checked) {
 
     .section-learninggoals-y {
         display: block;
-
-        height: 100svh;
-        background-color: yellow;
     }
+    
 }
 
 /* -------- REFLECTION --------  */
@@ -217,7 +233,7 @@ html:has([value="goals"]:checked):has([value="reflection"]:checked) {
         display: none;
     }
 
-    .section-cy {
+    .section-ck {
         display: block;
 
         height: 100svh;
@@ -236,7 +252,7 @@ html:has([value="goals"]:checked):has([value="reflection"]:checked) {
         display: none;
     }
 
-    .section-cy {
+    .section-my {
         display: block;
 
         height: 100svh;
@@ -255,7 +271,7 @@ html:has([value="goals"]:checked):has([value="reflection"]:checked) {
         display: none;
     }
 
-    .section-cy {
+    .section-mk {
         display: block;
 
         height: 100svh;
@@ -274,7 +290,7 @@ html:has([value="goals"]:checked):has([value="reflection"]:checked) {
         display: none;
     }
 
-    .section-cy {
+    .section-yk {
         display: block;
 
         height: 100svh;
