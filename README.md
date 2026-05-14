@@ -21,3 +21,10 @@ Wat betreft mijn leerdoelen ben ik over één leerdoel nog niet helemaal uit en 
 1. Ik wil leren hoe ik een onderhoudbare frontend kan ontwikkelen met semantische HTML, moderne CSS en gestructureerde JavaScript-code. Ik wil me hierbij focussen op het maken van een website, waar bijvoorbeeld makkelijk extra informatie aan toe te voegen is, zonder dat de hele structuur van de website vergaat.
 2. Ik wil kijken hoe ik een creatieve website kan maken voor mobiele telefoons, door deze op een unieke manier in te zetten of door een uniek ontwerp met specifieke functies te maken die past bij het formaat van het device. Ik wil me hierbij focussen op de sterke en unieke punten van een mobiele telefoon.
 3. Ik wil kijken een ik een immersive website maak met echt een "wow" gevoel. Een website die nét even wat verder gaat dan andere websites.
+
+
+
+## Aantekeningen WN gesprek
+
+- Bij elke weekly nerd spreker reflecteren: wat vond ik ervan en waarom?
+- Niet de opdracht "te groot" maken.
