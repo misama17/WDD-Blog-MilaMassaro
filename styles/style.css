@@ -187,9 +187,15 @@ html:has([value="goals"]:checked):has([value="reflection"]:checked) {
 
     .section-reflection-k {
         display: block;
+        color: white;
+        padding: 2em;
 
-        height: 100svh;
+        height: 200svh;
         background-color: gray;
+
+        & h2 {
+            margin: 2em 0 1em 0;
+        }
     }
 }
 

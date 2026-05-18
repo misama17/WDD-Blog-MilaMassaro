@@ -59,12 +59,15 @@
     }
 
     .goals-one,
-    .goals-three {
+    .goals-three,
+    .goals-five {
         background-color: #A7A8AD;
         color: #292929;
     }
 
-    .goals-two {
+    .goals-two,
+    .goals-four,
+    .goals-six {
         background-color: #292929;
         color: #A7A8AD;
         flex-direction: row-reverse;
