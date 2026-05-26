@@ -1,0 +1,404 @@
+:root {
+    --color-panel: rgba(16, 15, 15, 0.4);
+}
+
+body {
+    margin: 0;
+    background: #fbdf3f;
+    background: radial-gradient(circle, rgba(251, 223, 63, 1) 0%, rgba(252, 70, 225, 1) 100%);
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.container-dashboard {
+    display: grid;
+    grid-template-columns: 90px minmax(300px, 1200px);
+    grid-template-rows: 90px minmax(500px, 700px);
+
+    place-content: center;
+
+    grid-template-areas:
+        ". top"
+        "side content";
+
+    width: 97vw;
+    height: 97svh;
+
+    padding: 1em;
+
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+
+.top-bar,
+.side-bar {
+    grid-area: top;
+    place-self: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: .5em;
+
+    border-radius: 10em;
+
+    background-color: var(--color-panel);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+
+    & input,
+    & legend {
+        display: none;
+    }
+
+    & label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-width: 2.5em;
+        height: 2.5em;
+
+        border-radius: 10em;
+
+        color: rgba(255, 255, 255, .75);
+
+        cursor: pointer;
+
+        transition:
+            background .2s ease,
+            color .2s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, .05);
+            color: white;
+        }
+    }
+
+    & input:checked+label {
+        background: white;
+        color: #2f2f2f;
+        box-shadow:
+            0 2px 8px rgba(255, 255, 255, .08);
+    }
+
+
+}
+
+.top-bar {
+    width: fit-content;
+    height: min-content;
+
+    width: 50%;
+}
+
+.side-bar {
+    grid-area: side;
+    flex-direction: column;
+
+    height: 50%;
+}
+
+.content {
+    grid-area: content;
+
+    border-radius: 1.5em;
+
+    background-color: var(--color-panel);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+
+    min-height: 0;
+    min-width: 0;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.workxwork,
+.workxgoals,
+.workxnerds,
+.workxreflection,
+.goalsxgoals,
+.goalsxnerds,
+.goalsxreflection,
+.nerdsxnerds,
+.nerdsxreflection,
+.reflectionxreflection {
+    display: none;
+}
+
+
+/* MARK: RADIOBUTTONS VALUES
+/* -------- SELECT SECTION --------  */
+html:has([value="work"]:checked) {
+    --work: true;
+}
+
+html:has([value="nerds"]:checked) {
+    --nerds: true;
+}
+
+html:has([value="goals"]:checked) {
+    --goals: true;
+}
+
+html:has([value="reflection"]:checked) {
+    --reflection: true;
+}
+
+/* -------- SELECT 2 SECTIONS --------  */
+/* WORK X WORK */
+.container-dashboard:has(.top-bar [value="work"]:checked):has(.side-bar [value="work"]:checked),
+.container-dashboard:has(.top-bar [value="work"]:checked):has(.side-bar [value="work"]:checked) {
+    --workxwork: true;
+}
+
+/* WORK X GOALS */
+.container-dashboard:has(.top-bar [value="work"]:checked):has(.side-bar [value="goals"]:checked),
+.container-dashboard:has(.top-bar [value="goals"]:checked):has(.side-bar [value="work"]:checked) {
+    --workxgoals: true;
+}
+
+/* WORK X NERDS */
+.container-dashboard:has(.top-bar [value="work"]:checked):has(.side-bar [value="nerds"]:checked),
+.container-dashboard:has(.top-bar [value="nerds"]:checked):has(.side-bar [value="work"]:checked) {
+    --workxnerds: true;
+}
+
+/* WORK X REFLECTION */
+.container-dashboard:has(.top-bar [value="work"]:checked):has(.side-bar [value="reflection"]:checked),
+.container-dashboard:has(.top-bar [value="reflection"]:checked):has(.side-bar [value="work"]:checked) {
+    --workxreflection: true;
+}
+
+/* GOALS X GOALS */
+.container-dashboard:has(.top-bar [value="goals"]:checked):has(.side-bar [value="goals"]:checked),
+.container-dashboard:has(.top-bar [value="goals"]:checked):has(.side-bar [value="goals"]:checked) {
+    --goalsxgoals: true;
+}
+
+/* GOALS X NERDS */
+.container-dashboard:has(.top-bar [value="goals"]:checked):has(.side-bar [value="nerds"]:checked),
+.container-dashboard:has(.top-bar [value="nerds"]:checked):has(.side-bar [value="goals"]:checked) {
+    --goalsxnerds: true;
+}
+
+/* GOALS X REFLECTION */
+.container-dashboard:has(.top-bar [value="goals"]:checked):has(.side-bar [value="reflection"]:checked),
+.container-dashboard:has(.top-bar [value="reflection"]:checked):has(.side-bar [value="goals"]:checked) {
+    --goalsxreflection: true;
+}
+
+/* NERDS X NERDS */
+.container-dashboard:has(.top-bar [value="nerds"]:checked):has(.side-bar [value="nerds"]:checked),
+.container-dashboard:has(.top-bar [value="nerds"]:checked):has(.side-bar [value="nerds"]:checked) {
+    --nerdsxnerds: true;
+}
+
+/* NERDS X REFLECTION */
+.container-dashboard:has(.top-bar [value="nerds"]:checked):has(.side-bar [value="reflection"]:checked),
+.container-dashboard:has(.top-bar [value="reflection"]:checked):has(.side-bar [value="nerds"]:checked) {
+    --nerdsxreflection: true;
+}
+
+/* REFLECTION X REFLECTION */
+.container-dashboard:has(.top-bar [value="reflection"]:checked):has(.side-bar [value="reflection"]:checked),
+.container-dashboard:has(.top-bar [value="reflection"]:checked):has(.side-bar [value="reflection"]:checked) {
+    --reflectionxreflection: true;
+}
+
+
+
+
+/* MARK: CONTAINER QUERIES
+/* ----- WORK X WORK ----- */
+@container style(--workxwork:true) {
+    .workxwork {
+        display: block;
+        padding: 1em;
+    }
+
+    h2 {
+        color: hotpink;
+    }
+
+    /* div {
+        position: relative;
+        width: 30em;
+        height: 20em;
+        border-radius: .5em;
+        background-color: hotpink;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            backdrop-filter: blur(12px);
+
+            z-index: 1;
+
+            border-radius: inherit;
+        }
+    } */
+}
+
+/* ----- WORK X GOALS ----- */
+@container style(--workxgoals:true) {
+    .workxgoals {
+        display: block;
+    }
+
+    h2 {
+        color: purple;
+    }
+}
+
+/* ----- WORK X NERDS ----- */
+@container style(--workxnerds:true) {
+    .workxnerds {
+        display: block;
+    }
+
+    h2 {
+        color: blue;
+    }
+}
+
+/* ----- WORK X REFLECTION ----- */
+@container style(--workxreflection:true) {
+    .workxreflection {
+        display: block;
+    }
+
+    h2 {
+        color: orange;
+    }
+}
+
+/* ----- GOALS X GOALS ----- */
+@container style(--goalsxgoals:true) {
+    .goalsxgoals {
+        display: block;
+    }
+
+    h2 {
+        color: red;
+    }
+}
+
+/* -----GOALS X NERDS ----- */
+@container style(--goalsxnerds:true) {
+    .goalsxnerds {
+        display: block;
+    }
+
+    h2 {
+        color: violet;
+    }
+}
+
+/* ----- GOALS X REFLECTION ----- */
+@container style(--goalsxreflection:true) {
+    .goalsxreflection {
+        display: block;
+    }
+
+    h2 {
+        color: magenta;
+    }
+}
+
+/* ----- NERDS X NERDS ----- */
+@container style(--nerdsxnerds:true) {
+    .nerdsxnerds {
+        display: block;
+    }
+
+    h2 {
+        color: cornflowerblue;
+    }
+}
+
+/* ----- NERDS X REFLECTION ----- */
+@container style(--nerdsxreflection:true) {
+    .nerdsxreflection {
+        display: block;
+    }
+
+    h2 {
+        color: crimson;
+    }
+}
+
+/* ----- REFLECTION X REFLECTION ----- */
+@container style(--reflectionxreflection:true) {
+    .reflectionxreflection {
+        display: block;
+    }
+
+    h2 {
+        color: mediumpurple;
+    }
+}
+
+
+.container-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    background-color: purple;
+    min-height: 15em;
+    border-radius: 1em;
+}
+
+.card-work {
+    grid-column: span 2;
+}
+
+.card-goal {
+    grid-column: span 1;
+}
+
+
+
+@media (width > 750px) {
+    .container-dashboard {
+        background-color: aliceblue;
+    }
+
+    .container-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (width > 1150px) {
+    .container-dashboard {
+        background-color: #fbdf3f;
+    }
+
+    .container-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+}
