@@ -29,3 +29,17 @@ checkboxes.forEach(cb => {
     updateState();
   });
 });
+
+
+
+
+
+const container = document.querySelector('.iframe-container');
+const iframe = document.querySelector('.iframe-css');
+
+document.querySelectorAll('.iframe-container').forEach(container => {
+  const iframe = container.querySelector('iframe');
+  new ResizeObserver(() => {
+    iframe.style.transform = `scale(${container.offsetWidth / 1280})`;
+  }).observe(container);
+});
