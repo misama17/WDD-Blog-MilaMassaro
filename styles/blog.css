@@ -493,6 +493,7 @@ html:has([value="reflection"]:checked) {
 
     grid-template-areas:
         "iframe   text"
+        "iframe   text"
         "iframe   title";
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
@@ -509,6 +510,10 @@ html:has([value="reflection"]:checked) {
     & p {
         align-self: start;
         margin: 0;
+
+        &:nth-of-type(2) {
+            margin-top: .75em;
+        }
     }
 
     & .iframe-container {
@@ -526,6 +531,12 @@ html:has([value="reflection"]:checked) {
             transform-origin: top left;
         }
     }
+
+    & ul {
+        margin: 0;
+        padding-left: .8em;
+        list-style: disc;
+    }
 }
 
 .card-goal {
@@ -539,6 +550,16 @@ html:has([value="reflection"]:checked) {
         margin: 0;
         font-size: 1rem;
         font-weight: 300;
+    }
+}
+
+.card-reflection {
+    & h3 {
+        margin: .5em 0 0 0;
+    }
+
+    & p {
+        margin-top: .5em;
     }
 }
 
