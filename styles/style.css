@@ -24,291 +24,54 @@
 }
 
 
-
 :root {
-    --color-background: white;
-    --color-text-one: black;
+    color-scheme: light dark;
+
+    --color-panel: light-dark(rgba(16, 15, 15, 0.4), rgba(255, 255, 255, 0.555));
+    --color-panel-border: light-dark(rgba(16, 15, 15, 1), rgba(255, 255, 255, 1))
+    --color-text-one: light-dark(#fe5035, #fe5035);
+    --color-text-two: light-dark(#020202, #efe7d6);
+    --color-text-three: light-dark(#efe7d6, #020202);
+    --color-text-four: light-dark(#fff, #1e1e1e);
+    --color-background-one: light-dark(#efe7d6, #1e1e1e);
+    --color-background-two: light-dark(#1e1e1e, #efe7d6);
+    --color-skin: light-dark(#fdb998, #fdb998);
+    --color-hair: light-dark(#633d23, #633d23);
+    --color-eyeball: light-dark(#fff, #fff);
+    --color-pupil: light-dark(#472003, #472003);
+    --color-lash: light-dark(#281b0d, #281b0d);
+    --color-eyebrow: light-dark(#442f23, #442f23);
+    --color-clothes: light-dark(#1e1e1e, #efe7d6);
+    --color-clothes-two: light-dark(#020202, #fff);
+    --color-jewellery-front: light-dark(#fcd638, #fcd638);
+    --color-jewellery-back: light-dark(#ba9600, #ba9600);
+    --color-flower: light-dark(#fe5035, #fff);
+    --color-middle: light-dark(#fcd638, #fcd638);
+    --color-stam: light-dark(#30893b, #30893b);
+    --color-letter: light-dark(#fe5035, #efe7d6);
+}
+
+:root:has([value='light']:checked) {
+    color-scheme: light;
+}
+
+:root:has([value='dark']:checked) {
+    color-scheme: dark;
 }
 
 body {
     margin: 0;
-    overflow-x: clip;
-    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
+    background: var(--color-background-one);
+    overflow-x: hidden;
 }
 
-h2 {
-    font-family: 'Instrument Regular', serif;
-}
-
-
-form {
-    position: fixed;
-    z-index: 100;
-    background-color: var(--color-background);
-    color: var(--color-text-one);
-    padding: .5em .2em;
-    right: 0;
-    top: 5%;
-    display: flex;
-    flex-direction: column;
-
-    border-radius: .75em 0 0 .75em;
-
-    & label {
-        padding: .75em;
-    }
-
-    /* !! ChatGPT gevraagd hoe ik de kleur van de radiobutton aan kon passen */
-    & input[type="checkbox"] {
-        accent-color: var(--color-text-one);
-        margin: .5em 1em;
-    }
-}
-
-
-.is-disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-}
-
-.is-disabled input {
-    pointer-events: none;
-}
-
-
-
-
-
-.section-weeklynerds-c,
-.section-ownwork-m,
-.section-learninggoals-y,
-.section-reflection-k,
-.section-cm,
-.section-cy,
-.section-ck,
-.section-my,
-.section-mk,
-.section-yk {
-    display: none;
-}
-
-/* MARK: CHECKBOXES VALUES
-/* -------- SELECT SECTION --------  */
-html:has([value="weeklynerds"]:checked) {
-    --weeklynerds: true;
-}
-
-html:has([value="work"]:checked) {
-    --work: true;
-}
-
-html:has([value="goals"]:checked) {
-    --goals: true;
-}
-
-html:has([value="reflection"]:checked) {
-    --reflection: true;
-}
-
-/* -------- SELECT 2 SECTIONS --------  */
-/* CM */
-html:has([value="weeklynerds"]:checked):has([value="work"]:checked) {
-    --weeklynerds-work: true;
-}
-
-/* CY */
-html:has([value="weeklynerds"]:checked):has([value="goals"]:checked) {
-    --weeklynerds-goals: true;
-}
-
-/* CK */
-html:has([value="weeklynerds"]:checked):has([value="reflection"]:checked) {
-    --weeklynerds-reflection: true;
-}
-
-/* MY */
-html:has([value="work"]:checked):has([value="goals"]:checked) {
-    --work-goals: true;
-}
-
-/* MK */
-html:has([value="work"]:checked):has([value="reflection"]:checked) {
-    --work-reflection: true;
-}
-
-/* YK */
-html:has([value="goals"]:checked):has([value="reflection"]:checked) {
-    --goals-reflection: true;
-}
-
-
-
-
-/* MARK: CONTAINER QUERIES
-/* -------- WEEKLY NERDS --------  */
-@container style(--weeklynerds:true) {
-    .section-intro {
-        display: none;
-    }
-
-    .section-weeklynerds-c {
-        display: block;
-    }
-}
-
-/* -------- OWN WORK --------  */
-@container style(--work:true) {
-    .section-intro {
-        display: none;
-    }
-
-    .section-ownwork-m {
-        display: block;
-    }
-}
-
-/* -------- LEARNING GOALS --------  */
-@container style(--goals:true) {
-    .section-intro {
-        display: none;
-    }
-
-    .section-learninggoals-y {
-        display: block;
-    }
-    
-}
-
-/* -------- REFLECTION --------  */
-@container style(--reflection:true) {
-    .section-intro {
-        display: none;
-    }
-
-    .section-reflection-k {
-        display: block;
-        color: white;
-        padding: 2em;
-
-        height: 200svh;
-        background-color: gray;
-
-        & h2 {
-            margin: 2em 0 1em 0;
-        }
-    }
-}
-
-/* -------- CYAN AND MAGENTA --------  */
-@container style(--weeklynerds-work:true) {
-    .section-intro {
-        display: none;
-    }
-
-    .section-cm {
-        display: block;
-
-        height: 100svh;
-        background-color: violet;
-    }
-
-    .section-weeklynerds-c,
-    .section-ownwork-m {
-        display: none;
-    }
-}
-
-/* -------- CYAN AND YELLOW --------  */
-@container style(--weeklynerds-goals:true) {
-    .section-intro {
-        display: none;
-    }
-
-    .section-cy {
-        display: block;
-
-        height: 100svh;
-        background-color: darkseagreen;
-    }
-
-    .section-weeklynerds-c,
-    .section-learninggoals-y {
-        display: none;
-    }
-}
-
-/* -------- CYAN AND BLACK --------  */
-@container style(--weeklynerds-reflection:true) {
-    .section-intro {
-        display: none;
-    }
-
-    .section-ck {
-        display: block;
-
-        height: 100svh;
-        background-color: blue;
-    }
-
-    .section-weeklynerds-c,
-    .section-reflection-k {
-        display: none;
-    }
-}
-
-/* -------- MAGENTA AND YELLOW --------  */
-@container style(--work-goals:true) {
-    .section-intro {
-        display: none;
-    }
-
-    .section-my {
-        display: block;
-
-        height: 100svh;
-        background-color: orange;
-    }
-
-    .section-ownwork-m,
-    .section-learninggoals-y {
-        display: none;
-    }
-}
-
-/* -------- MAGENTA AND BLACK --------  */
-@container style(--work-reflection:true) {
-    .section-intro {
-        display: none;
-    }
-
-    .section-mk {
-        display: block;
-
-        height: 100svh;
-        background-color: darkmagenta;
-    }
-
-    .section-ownwork-m,
-    .section-reflection-k {
-        display: none;
-    }
-}
-
-/* -------- YELLOW AND BLACK --------  */
-@container style(--goals-reflection:true) {
-    .section-intro {
-        display: none;
-    }
-
-    .section-yk {
-        display: block;
-
-        height: 100svh;
-        background-color: gold;
-    }
-
-    .section-learninggoals-y,
-    .section-reflection-k {
-        display: none;
-    }
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }

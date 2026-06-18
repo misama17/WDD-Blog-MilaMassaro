@@ -1,0 +1,194 @@
+.layout-container {
+    z-index: -100;
+    position: fixed;
+    width: 100vw;
+    height: 100svh;
+
+    display: grid;
+    grid-template-areas:
+        "m      i"
+        "l      a"
+        "ill    ill";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25% 25% 50%;
+    align-items: center;
+}
+
+/* --------------- */
+/* MARK: Name MILA */
+/* --------------- */
+.letter {
+    fill: var(--color-letter);
+
+    width: clamp(185px, 20vw, 200px);
+}
+
+.m {
+    grid-area: m;
+    justify-self: end;
+}
+
+.i {
+    grid-area: i;
+    justify-self: start;
+}
+
+.l {
+    grid-area: l;
+    justify-self: end;
+}
+
+.a {
+    grid-area: a;
+    justify-self: start;
+}
+
+/* ----------------------- */
+/* MARK: Illustration Mila */
+/* ----------------------- */
+.illustration {
+    grid-area: ill;
+
+    width: clamp(455px, 50vw, 750px);
+    justify-self: center;
+    overflow: clip;
+}
+
+/* <---- HAAR ----> */
+.haar_achterkant,
+.haar_rechts,
+.haar_links,
+.haar_plukje {
+    fill: var(--color-hair);
+}
+
+/* <---- LICHAAM ----> */
+.nek,
+.hoofd,
+.hand_rechts,
+.hand_links {
+    fill: var(--color-skin);
+}
+
+.oogbol {
+    fill: var(--color-eyeball);
+}
+
+.pupil_rechts,
+.pupil_links {
+    fill: var(--color-pupil);
+}
+
+.wimpers {
+    fill: var(--color-lash);
+}
+
+.wenkbrauwen {
+    fill: var(--color-eyebrow);
+}
+
+.onderlichaam,
+.arm_rechts,
+.arm_links {
+    fill: var(--color-clothes);
+}
+
+/* <---- KLEDING EN DETAILS ----> */
+.zak,
+.lichaam {
+    fill: var(--color-clothes-two);
+}
+
+.ketting,
+.hangertje_draak {
+    fill: var(--color-jewellery-front);
+}
+
+.oog {
+    transform-box: fill-box;
+}
+
+.oog>.pupil_links,
+.oog>.pupil_rechts {
+    animation-timeline: view();
+    animation-timing-function: cover exit;
+    animation-name: translate-animation-oog;
+    animation-fill-mode: both;
+}
+
+.hangertje_draak {
+    transform-box: fill-box;
+    transform-origin: 50% 0;
+
+    animation-timeline: view();
+    animation-timing-function: contain;
+    animation-name: rotate-animation-ketting;
+    animation-fill-mode: both;
+}
+
+/* <---- BLOEMEN ----> */
+.stam {
+    fill: var(--color-stam);
+}
+
+.bloemblaadje {
+    fill: var(--color-flower);
+}
+
+.bloemmidden {
+    fill: var(--color-middle);
+}
+
+@media (width > 850px) {
+    .layout-container {
+        grid-template-areas:
+            "m  i  ill"
+            "l  a  ill"
+            "x  x  ill"
+            "x  x  ill";
+        grid-template-columns: 20% 20% 60%;
+        grid-template-rows: repeat(4, 1fr);
+
+        & .m {
+            align-self: end;
+            justify-self: end;
+        }
+
+        & .i {
+            align-self: end;
+            justify-self: start;
+        }
+
+        & .l {
+            align-self: start;
+            justify-self: end;
+        }
+
+        & .a {
+            align-self: start;
+            justify-self: start;
+            padding: 5px 0 0 20px;
+        }
+
+        & .illustration {
+            align-self: end;
+        }
+    }
+}
+
+@media (width > 1150px) {
+    .layout-container {
+        grid-template-areas:
+            "m  i  l   a   ill";
+        grid-template-columns: 15% 15% 15% 15% 50%;
+        grid-template-rows: 1fr;
+
+        & .m,
+        & .i,
+        & .l,
+        & .a {
+            align-self: center;
+            justify-self: center;
+        }
+    }
+}
