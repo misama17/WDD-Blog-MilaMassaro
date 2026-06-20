@@ -1,22 +1,32 @@
 .container-dashboard {
     display: grid;
-    grid-template-columns: 90px minmax(300px, 1200px);
-    grid-template-rows: 90px minmax(500px, 700px);
-
     place-content: center;
 
     grid-template-areas:
-        ". top"
-        "side content";
+        "top"
+        "side"
+        "content";
+    gap: .5em;
 
     width: 100vw;
     height: 100svh;
 
-    padding: 1em 2.5em 1em 1em;
+    padding: 1em;
 
     overflow: hidden;
     box-sizing: border-box;
 
+    @media (width > 850px) {
+        grid-template-areas:
+            ".      top"
+            "side   content";
+        grid-template-columns: 50px minmax(300px, 1200px);
+        grid-template-rows: 50px minmax(500px, 700px);
+    }
+
+    @media (width > 1150px) {
+        padding-right: 2.5em;
+    }
 }
 
 .top-bar,
@@ -46,9 +56,6 @@
         align-items: center;
         justify-content: center;
 
-        min-width: 2em;
-        height: 2em;
-
         border-radius: 10em;
 
         color: var(--color-text-four);
@@ -62,6 +69,9 @@
         & svg {
             fill: var(--color-text-four);
             stroke: none;
+
+            min-width: 1.25em;
+            height: 1.25em;
         }
 
         &:hover {
@@ -71,7 +81,9 @@
     }
 
     & input:checked+label {
-        background: white;
+        background: var(--color-text-four);
+        width: 2.25em;
+        aspect-ratio: 1/1;
         box-shadow:
             0 2px 8px rgba(255, 255, 255, .08);
 
@@ -87,14 +99,24 @@
     width: fit-content;
     height: min-content;
 
-    width: 50%;
+    width: 80%;
+
+    @media (width > 850px) {
+        width: 50%;
+    }
 }
 
 .side-bar {
     grid-area: side;
-    flex-direction: column;
+    flex-direction: row;
 
-    height: 50%;
+    width: 80%;
+
+    @media (width > 850px) {
+        flex-direction: column;
+        height: 50%;
+        width: 50%;
+    }
 }
 
 .content {
@@ -109,7 +131,6 @@
     min-height: 0;
     min-width: 0;
     overflow-y: auto;
-    scroll-behavior: smooth;
 }
 
 .workxwork,
@@ -212,7 +233,7 @@ html:has([value="reflection"]:checked) {
 /* ----- WORK X WORK ----- */
 @container style(--workxwork:true) {
     .workxwork {
-        display: block;
+        display: grid;
 
         padding: 1em;
 
@@ -229,7 +250,7 @@ html:has([value="reflection"]:checked) {
 /* ----- WORK X GOALS ----- */
 @container style(--workxgoals:true) {
     .workxgoals {
-        display: block;
+        display: grid;
 
         padding: 1em;
 
@@ -242,9 +263,7 @@ html:has([value="reflection"]:checked) {
         }
 
         & .card-goal {
-            display: block;
-
-            grid-column: span 1;
+            display: grid;
 
             align-self: start;
             min-height: 15em;
@@ -257,21 +276,24 @@ html:has([value="reflection"]:checked) {
     .workxnerds {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(10, 1fr);
+        grid-template-rows: min-content;
 
         padding: 1em;
 
+        & .card {
+            display: grid;
+        }
+
         & .card-work {
             display: grid;
-
-            grid-row: span 1;
-            grid-column: span 2;
         }
 
         & .card-nerd {
-            display: block;
-            grid-column: span 1;
-            grid-row: span 2;
+            display: grid;
+        }
+
+        @media (width > 850px) {
+            grid-template-rows: repeat(10, 1fr);
         }
     }
 }
@@ -280,8 +302,6 @@ html:has([value="reflection"]:checked) {
 @container style(--workxreflection:true) {
     .workxreflection {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(12, 1fr);
 
         padding: 1em;
 
@@ -293,13 +313,11 @@ html:has([value="reflection"]:checked) {
         }
 
         & .card-reflection {
-            display: block;
-            grid-column: span 2;
-            grid-row: span 2;
+            display: grid;
         }
 
         & .reflection-last {
-            display: block;
+            display: grid;
             grid-column: span 2;
             grid-row: span 3;
         }
@@ -317,10 +335,7 @@ html:has([value="reflection"]:checked) {
         padding: 1em;
 
         & .card-goal {
-            display: block;
-
-            grid-column: span 1;
-            grid-row: span 1;
+            display: grid;
         }
     }
 }
@@ -331,21 +346,14 @@ html:has([value="reflection"]:checked) {
         display: grid;
         padding: 1em;
 
-        & .card {
-            display: block;
-        }
+        /* grid-template-rows: repeat(14, 1fr); */
 
         & .card-nerd {
-            display: block;
-            grid-column: span 1;
-            grid-row: span 2;
+            display: grid;
         }
 
         & .card-goal {
-            display: block;
-
-            grid-column: span 1;
-            grid-row: span 1;
+            display: grid;
         }
     }
 }
@@ -355,13 +363,9 @@ html:has([value="reflection"]:checked) {
     .goalsxreflection {
         display: grid;
         padding: 1em;
-        grid-template-rows: repeat(6, 1fr);
 
         & .card-goal {
             display: block;
-
-            grid-column: span 1;
-            grid-row: span 1;
         }
 
         & .reflection-last {
@@ -466,13 +470,10 @@ html:has([value="reflection"]:checked) {
 .card {
     display: none;
 
-    background-color: lightgrey;
-    min-height: 18em;
-    border-radius: 10px;
     padding: 1em 2em 1em 1em;
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 
     border-radius: 16px;
     padding: 20px;
@@ -493,18 +494,19 @@ html:has([value="reflection"]:checked) {
     box-shadow: 0 0 18px rgba(255, 20, 147, 0.25);
 
     grid-column: span 2;
-    max-height: 18em;
+    max-height: min-content;
     overflow: clip;
 
     grid-template-areas:
-        "iframe   text"
-        "iframe   text"
-        "iframe   title";
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
+        "title"
+        "iframe"
+        "text"
+        "em";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr 1fr;
 
     align-items: center;
-    column-gap: .5em;
+    gap: .5em;
 
     & h2 {
         grid-area: title;
@@ -513,6 +515,7 @@ html:has([value="reflection"]:checked) {
     }
 
     & p {
+        grid-area: text;
         align-self: start;
         margin: 0;
 
@@ -521,11 +524,18 @@ html:has([value="reflection"]:checked) {
         }
     }
 
+    & p:has(em:only-child) {
+        grid-area: em;
+        align-self: start;
+    }
+
     & .iframe-container {
         grid-area: iframe;
+
+        width: 100%;
+        height: auto;
         aspect-ratio: 4 / 3;
-        height: 15em;
-        width: auto;
+
         position: relative;
         overflow: hidden;
         border-radius: 6px;
@@ -537,18 +547,60 @@ html:has([value="reflection"]:checked) {
         }
     }
 
-    & ul {
-        margin: 0;
-        padding-left: .8em;
-        list-style: disc;
-        font-weight: 300;
+    @media (width > 650px) {
+        grid-template-areas:
+            "iframe     title"
+            "iframe     em"
+            "text       text";
+        grid-template-columns: 1fr 10em;
+        grid-template-rows: auto 1fr auto;
+
+        & h2 {
+            align-self: start;
+        }
+    }
+
+    @media (width > 850px) {
+        max-height: 18em;
+
+        grid-template-areas:
+            "iframe   text"
+            "iframe   em"
+            "iframe   title";
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr auto;
+
+        & .iframe-container {
+            align-self: start;
+            aspect-ratio: 4 / 3;
+            height: 15em;
+            width: calc(15em * 4 / 3);
+        }
+
+        & h2 {
+            align-self: end;
+        }
+
+        & p:has(em:only-child) {
+            align-self: start;
+        }
+    }
+
+    @media (width > 1150px) {
+        grid-template-areas:
+            "iframe   text"
+            "iframe   em"
+            "iframe  title";
     }
 }
 
 .card-goal {
     display: none;
 
-    height: 18em;
+    grid-column: span 2;
+    grid-row: span 1;
+
+    height: auto;
 
     background: linear-gradient(135deg,
             rgba(255, 230, 0, 0.5),
@@ -556,10 +608,21 @@ html:has([value="reflection"]:checked) {
 
     border: 1px solid rgba(255, 245, 120, 0.45);
     box-shadow: 0 0 18px rgba(255, 220, 0, 0.25);
+
+    @media (width > 650px) {
+        grid-column: span 1;
+    }
+
+    @media (width > 1150px) {
+        height: 18em;
+    }
 }
 
 .card-nerd {
     display: none;
+
+    grid-column: span 2;
+    grid-row: span 1;
 
     background: linear-gradient(135deg,
             rgba(0, 183, 255, 0.5),
@@ -574,6 +637,11 @@ html:has([value="reflection"]:checked) {
         font-size: 1rem;
         font-weight: 300;
     }
+
+    @media (width > 850px) {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
 }
 
 .card-reflection,
@@ -584,10 +652,12 @@ html:has([value="reflection"]:checked) {
 
     border: 1px solid rgba(190, 140, 255, 0.4);
     box-shadow: 0 0 18px rgba(180, 90, 255, 0.25);
-}
 
-.card-reflection,
-.reflection-last {
+    grid-row: span 1;
+    grid-column: span 2;
+
+    grid-template-rows: repeat(4, auto) 1fr;
+
     & h3 {
         margin: 1em 0 0 0;
     }
@@ -595,28 +665,33 @@ html:has([value="reflection"]:checked) {
     & p {
         margin-top: .5em;
     }
+
+    @media (width > 850px) {
+        grid-row: span 2;
+    }
+}
+
+.reflection-last {
+    grid-template-rows: repeat(6, auto) 1fr;
 }
 
 
+@media (width < 850px) {
+    .goalsxnerds {
+        grid-template-rows: none;
+        grid-auto-rows: min-content;
+    }
+
+    .goalsxnerds .card-goal {
+        grid-column: span 2;
+    }
+}
 
 @media (width > 850px) {
     .container-content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
-    }
-
-    .card-work {
-        grid-template-areas:
-            "iframe   text  title";
-        grid-template-columns: auto 1fr 1fr;
-
-        & h2 {
-            align-self: end;
-            justify-self: end;
-            text-align: end;
-            font-size: clamp(1.4rem, 2rem, 3rem);
-        }
     }
 }
 
@@ -630,21 +705,5 @@ html:has([value="reflection"]:checked) {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
-
-        & .card-work {
-            grid-template-areas:
-                "iframe   text"
-                "iframe   text"
-                "iframe   title";
-            grid-template-columns: auto 1fr;
-            grid-template-rows: auto 1fr;
-
-            & h2 {
-                align-self: end;
-                justify-self: start;
-                text-align: start;
-                font-size: 1.4rem;
-            }
-        }
     }
 }

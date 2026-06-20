@@ -27,7 +27,7 @@
 :root {
     color-scheme: light dark;
 
-    --color-panel: light-dark(rgba(16, 15, 15, 0.4), rgba(255, 255, 255, 0.555));
+    --color-panel: light-dark(rgba(16, 15, 15, 0.5), rgba(255, 255, 255, 0.5));
     --color-panel-border: light-dark(rgba(16, 15, 15, 1), rgba(255, 255, 255, 1))
     --color-text-one: light-dark(#fe5035, #fe5035);
     --color-text-two: light-dark(#020202, #efe7d6);
@@ -74,4 +74,10 @@ body {
     position: absolute;
     white-space: nowrap;
     width: 1px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
