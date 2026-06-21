@@ -1,4 +1,4 @@
-# WDD-Blog-MilaMassaro
+<img width="150" height="150" alt="goals-icon" src="https://github.com/user-attachments/assets/4e7b4232-f2ea-4ab3-90d6-995db2b795da" /><img width="150" height="150" alt="work-icon" src="https://github.com/user-attachments/assets/5514f02f-27d7-4196-987e-532824a58976" /># WDD-Blog-MilaMassaro
 
 ## Concept voor gesprek 2 
 
@@ -13,12 +13,18 @@ In eerste instantie wilde ik meerdere webpagina's maken, afhankelijk welke onder
 
 Hieronder een overzicht welk icoon voor wat staat:
 
-| <img width="150" height="150" alt="work-icon" src="https://github.com/user-attachments/assets/d9dd7a56-80b9-41b9-a4dd-b7e614637faa" />
- | Mijn werk |
-| <img width="150" height="150" alt="goals-icon" src="https://github.com/user-attachments/assets/c62ea06e-bd0a-4ba2-8233-b9a881124c7e" />
- | Mijn leerdoelen |
-| <img src="pad/naar/je/afbeelding1.png" width="250" alt="Talk 1"> | Weekly Nerds |
-| <img src="pad/naar/je/afbeelding2.png" width="250" alt="Talk 2"> | Reflectie |
+![U<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <path d="M1019.02,935.19l-95.8-330.53V87.32c0-28.74-19.16-47.9-47.9-47.9H204.68c-28.74,0-47.9,19.16-47.9,47.9v522.14l-95.8,330.53c-4.79,28.74,14.37,57.48,47.9,57.48h862.24c33.53,0,52.69-28.74,47.9-62.27ZM252.59,135.22h574.83v431.12H252.59V135.22ZM635.8,901.66h-191.61v-47.9h191.61v47.9ZM731.61,901.66v-95.8c0-28.74-19.16-47.9-47.9-47.9h-287.41c-28.74,0-47.9,19.16-47.9,47.9v95.8h-177.24l67.06-239.51h598.78l67.06,239.51h-172.45Z"/>
+  <path d="M635.8,231.02h-191.61c-28.74,0-47.9,19.16-47.9,47.9s19.16,47.9,47.9,47.9h191.61c28.74,0,47.9-19.16,47.9-47.9s-19.16-47.9-47.9-47.9Z"/>
+  <path d="M635.8,374.73h-191.61c-28.74,0-47.9,19.16-47.9,47.9s19.16,47.9,47.9,47.9h191.61c28.74,0,47.9-19.16,47.9-47.9s-19.16-47.9-47.9-47.9Z"/>
+</svg>ploading work-icon.svg…]()
+
+![Up<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <path d="M769.93,616.64c287.41-143.71,249.09-364.06,249.09-373.64-4.79-23.95-23.95-38.32-47.9-38.32h-143.71v-95.8c0-28.74-19.16-47.9-47.9-47.9h-479.02c-28.74,0-47.9,19.16-47.9,47.9v95.8H108.88c-23.95,0-43.11,14.37-47.9,38.32,0,9.58-38.32,234.72,249.09,373.64,43.11,57.48,105.39,95.8,182.03,110.18v196.4h-143.71c-28.74,0-47.9,19.16-47.9,47.9s19.16,47.9,47.9,47.9h383.22c28.74,0,47.9-19.16,47.9-47.9s-19.16-47.9-47.9-47.9h-143.71v-196.4c71.85-14.37,138.92-52.69,182.03-110.18ZM923.22,300.49c-4.79,38.32-23.95,105.39-95.8,167.66v-167.66h95.8ZM156.78,300.49h95.8v167.66c-71.85-62.27-91.01-129.34-95.8-167.66ZM348.39,444.2V156.78h383.22v287.41c0,105.39-86.22,191.61-191.61,191.61s-191.61-91.01-191.61-191.61Z"/>
+</svg>loading goals-icon.svg…]()
+
 
 
 ## Reflectie WN gesprek
