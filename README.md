@@ -1,10 +1,24 @@
 # WDD-Blog-MilaMassaro
 
-## Concept
+## Concept voor gesprek 2 
 
 Mijn idee is om gebruik te maken van CMYK kleuren als filters. Elke kleur staat voor een onderwerp. Dus bijvoorbeeld cyan = weekly nerds, magenta = eigen werk, yellow = leerdoelen en black = reflectie. magenta+yellow = waar je leerdoelen terugziet in eigen werk. yellow+cyan = hoe leerdoelen terug te zien zijn bij gastsprekers (overlappingen)? cyan+magenta = waar dingen van gastsprekers terug te zien zijn in eigen werk. En alles met black (k) is mijn reflectie op die onderdelen. 
 
 Uiteindelijk is mijn idee om deze "filters" te animeren, zodat helder is dat er door een bepaalde lens gekeken wordt naar mijn werk en wat ik geleerd heb in deze minor. Alles in mijn werk bestaat dus als het ware niet in losse categorieën, maar als één geheel dat telkens anders “uitgelezen” wordt afhankelijk van de lens die erop ligt. Ik ga hiervoor dus ook allemaal verschillende websites maken, afhankelijk van de content die geselecteerd is.
+
+
+## Concept voor eindgesprek
+
+In eerste instantie wilde ik meerdere webpagina's maken, afhankelijk welke onderwerpen zijn aangeklikt. Uiteindelijk heb ik het over een hele andere boeg gegooid. Ik heb het idee van 2 onderwerpen "matchen" wel behouden, maar heb het in de vorm van een dashboard met een bento grid gedaan. Nu kan je specifiek zoeken naar waar je geïnteresseerd in bent. Stel je bent geïnteresseerd in hoe mijn leerdoelen terugkomen in mijn werk, selecteer dan het icoon voor work en het icoon voor goals aan. 
+
+Hieronder een overzicht welk icoon voor wat staat:
+
+| <img width="150" height="150" alt="work-icon" src="https://github.com/user-attachments/assets/d9dd7a56-80b9-41b9-a4dd-b7e614637faa" />
+ | Mijn werk |
+| <img width="150" height="150" alt="goals-icon" src="https://github.com/user-attachments/assets/c62ea06e-bd0a-4ba2-8233-b9a881124c7e" />
+ | Mijn leerdoelen |
+| <img src="pad/naar/je/afbeelding1.png" width="250" alt="Talk 1"> | Weekly Nerds |
+| <img src="pad/naar/je/afbeelding2.png" width="250" alt="Talk 2"> | Reflectie |
 
 
 ## Reflectie WN gesprek
