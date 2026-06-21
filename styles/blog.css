@@ -344,10 +344,9 @@ html:has([value="reflection"]:checked) {
         display: grid;
         padding: 1em;
 
-        /* grid-template-rows: repeat(14, 1fr); */
-
         & .card-nerd {
             display: grid;
+            grid-template-rows: repeat(3, auto) 1fr;
         }
 
         & .card-goal {
@@ -378,13 +377,11 @@ html:has([value="reflection"]:checked) {
 @container style(--nerdsxnerds:true) {
     .nerdsxnerds {
         display: grid;
-        grid-auto-rows: 15em;
+        grid-auto-rows: min-content;
         padding: 1em;
 
         & .card-nerd {
-            display: block;
-            grid-column: span 1;
-            grid-row: span 2;
+            display: grid;
         }
     }
 }
