@@ -19,6 +19,7 @@ Mijn werk
 <img width="150" height="150" alt="work-icon" src="https://github.com/user-attachments/assets/5514f02f-27d7-4196-987e-532824a58976" />
 Mijn leerdoelen
 
+
 <img width="150" height="150" alt="nerd-icon" src="https://github.com/user-attachments/assets/62da922c-f5e5-43f0-88b9-532f8a33f00a" />
 Weekly Nerds
 
