@@ -41,7 +41,7 @@ Reflectie
 
 
 
-## Reflectie WN gesprek
+## Reflectie gesprek 2
 
 Zoals eerder al aangegeven had ik best wel wat startproblemen. Ik vond het moeilijk om weer in het coderen te komen en ik vroeg heel snel heel veel van mezelf. Ik bedacht eerst een idee, welke vaak vrij complex was, en daarna ging ik bedenken hoe ik het kon gaan coderen. Dit is eigenlijk een stukje wat ik vanuit mijn andere minor (Immersive Environments) heb meegenomen: niet jezelf beperken in de conceptfase en denk vooral outside the box. Maar toen ik bij deze minor kwam, stond dit me juist een beetje tegen, omdat ik hele leuke concepten had, maar totaal geen idee hoe ik het uit zou kunnen werken. Doordat ik niet "snel" code kon schrijven, omdat ik me te veel bezig hield met de complexe ideeën, kreeg ik erg veel stress. Ik had het allemaal wel in mijn hoofd zitten, maar het uitwerken was een ander verhaal. In week 2 van de volgende vakken (CSS en BT) heb ik dan ook besloten om dingen van dag tot dag te bekijken en niet me te veel bezig te houden met waar ik naartoe moet. Toen ik die mindset switch uiteindelijk had gemaakt, lukte alles me veel beter. Ineens kon ik wél de codeertaal zelf bedenken, ineens had ik minder stress en zag ik het meer als een proces en ineens ging coderen me veel beter af. En vooral: ineens vond ik de minor en coderen wél leuk. Ik heb best wel wat bij moeten poten hier en daar, zoals bij het vak API en het werken met API'S, maar over het algemeen ging het zijn gangetje wel en kon ik ook dingen opleveren waar ik met trots op terugkeek. Dit was erg fijn en goed voor mijn zelfvertrouwen in coderen. Ik voel me nu comfortabel om te coderen.
 
@@ -62,3 +62,6 @@ Wat betreft mijn leerdoelen ben ik over één leerdoel nog niet helemaal uit en 
 
 - Bij elke weekly nerd spreker reflecteren: wat vond ik ervan en waarom?
 - Niet de opdracht "te groot" maken.
+
+
+## Eindreflectie 
