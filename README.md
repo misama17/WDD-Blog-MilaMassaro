@@ -1,13 +1,47 @@
 # WDD-Blog-MilaMassaro
 
-## Concept
+## Concept voor gesprek 2 
 
 Mijn idee is om gebruik te maken van CMYK kleuren als filters. Elke kleur staat voor een onderwerp. Dus bijvoorbeeld cyan = weekly nerds, magenta = eigen werk, yellow = leerdoelen en black = reflectie. magenta+yellow = waar je leerdoelen terugziet in eigen werk. yellow+cyan = hoe leerdoelen terug te zien zijn bij gastsprekers (overlappingen)? cyan+magenta = waar dingen van gastsprekers terug te zien zijn in eigen werk. En alles met black (k) is mijn reflectie op die onderdelen. 
 
 Uiteindelijk is mijn idee om deze "filters" te animeren, zodat helder is dat er door een bepaalde lens gekeken wordt naar mijn werk en wat ik geleerd heb in deze minor. Alles in mijn werk bestaat dus als het ware niet in losse categorieën, maar als één geheel dat telkens anders “uitgelezen” wordt afhankelijk van de lens die erop ligt. Ik ga hiervoor dus ook allemaal verschillende websites maken, afhankelijk van de content die geselecteerd is.
 
 
-## Reflectie WN gesprek
+## Concept voor eindgesprek
+
+In eerste instantie wilde ik meerdere webpagina's maken, afhankelijk welke onderwerpen zijn aangeklikt. Uiteindelijk heb ik het over een hele andere boeg gegooid. Ik heb het idee van 2 onderwerpen "matchen" wel behouden, maar heb het in de vorm van een dashboard met een bento grid gedaan. Nu kan je specifiek zoeken naar waar je geïnteresseerd in bent. Stel je bent geïnteresseerd in hoe mijn leerdoelen terugkomen in mijn werk, selecteer dan het icoon voor work en het icoon voor goals aan. 
+
+Hieronder een overzicht welk icoon voor wat staat:
+
+<img width="150" height="150" alt="goals-icon" src="https://github.com/user-attachments/assets/4e7b4232-f2ea-4ab3-90d6-995db2b795da" />
+Mijn werk
+
+<img width="150" height="150" alt="work-icon" src="https://github.com/user-attachments/assets/5514f02f-27d7-4196-987e-532824a58976" />
+Mijn leerdoelen
+
+
+<img width="150" height="150" alt="nerd-icon" src="https://github.com/user-attachments/assets/62da922c-f5e5-43f0-88b9-532f8a33f00a" />
+Weekly Nerds
+
+<img width="150" height="150" alt="reflection-icon" src="https://github.com/user-attachments/assets/895b44d8-cba9-4ef1-a278-0bbd8bd44b4d" />
+Reflectie
+
+
+### Uitleg per cross match:
+- **work x work:** iframe en korte uitleg wat de opdracht was per vak.
+- **work x goals:** hoe mijn leerdoelen terug zijn gekomen in mijn werk.
+- **work x nerds:** welke kennis van de gastsprekers (nerds) ik mee heb genomen in mijn eigen werk of welke me aan het denken hebben gezet.
+- **work x reflection:** reflecties op alle vakken.
+- **goals x goals:** mijn leerdoelen.
+- **goals x nerds:** aan welke gastsprekers ik iets had met oog op mijn leerdoelen.
+- **goals x reflection:** reflectie op al mijn leerdoelen en of ik ze bereikt heb of niet.
+- **nerds x nerds:** samenvatting van mijn aantekeningen van de weekly nerds.
+- **nerds x reflection:** welke nerds ik wel leuk vond, welke ik minder leuk vond en aan welke ik het meest heb gehad.
+- **reflection x reflection:** reflecties van gesprek 1 en 2, reflecties op alle leerdoelen, reflectie op de meesterproef en reflectie op de gehele minor.
+
+
+
+## Reflectie gesprek 2
 
 Zoals eerder al aangegeven had ik best wel wat startproblemen. Ik vond het moeilijk om weer in het coderen te komen en ik vroeg heel snel heel veel van mezelf. Ik bedacht eerst een idee, welke vaak vrij complex was, en daarna ging ik bedenken hoe ik het kon gaan coderen. Dit is eigenlijk een stukje wat ik vanuit mijn andere minor (Immersive Environments) heb meegenomen: niet jezelf beperken in de conceptfase en denk vooral outside the box. Maar toen ik bij deze minor kwam, stond dit me juist een beetje tegen, omdat ik hele leuke concepten had, maar totaal geen idee hoe ik het uit zou kunnen werken. Doordat ik niet "snel" code kon schrijven, omdat ik me te veel bezig hield met de complexe ideeën, kreeg ik erg veel stress. Ik had het allemaal wel in mijn hoofd zitten, maar het uitwerken was een ander verhaal. In week 2 van de volgende vakken (CSS en BT) heb ik dan ook besloten om dingen van dag tot dag te bekijken en niet me te veel bezig te houden met waar ik naartoe moet. Toen ik die mindset switch uiteindelijk had gemaakt, lukte alles me veel beter. Ineens kon ik wél de codeertaal zelf bedenken, ineens had ik minder stress en zag ik het meer als een proces en ineens ging coderen me veel beter af. En vooral: ineens vond ik de minor en coderen wél leuk. Ik heb best wel wat bij moeten poten hier en daar, zoals bij het vak API en het werken met API'S, maar over het algemeen ging het zijn gangetje wel en kon ik ook dingen opleveren waar ik met trots op terugkeek. Dit was erg fijn en goed voor mijn zelfvertrouwen in coderen. Ik voel me nu comfortabel om te coderen.
 
@@ -28,3 +62,14 @@ Wat betreft mijn leerdoelen ben ik over één leerdoel nog niet helemaal uit en 
 
 - Bij elke weekly nerd spreker reflecteren: wat vond ik ervan en waarom?
 - Niet de opdracht "te groot" maken.
+
+
+## Eindreflectie 
+
+Ik vond het een intensieve, maar onzettend leerzame minor, waar ik echt uit heb gehaald waar ik op hoopte. Aan de start van de minor wist ik niet zo goed of webdesign en development echt iets voor mij was en hoewel ik denk dat het hele waardevolle kennis is, ben ik tot de conclusie gekomen dat dit niet het werkveld is waar ik in wil. In ieder geval niet alleen coderen. Wat ik niet per se had verwacht tijdens de minor, is het feit dat vakken me echt anders over bepaalde dingen heeft na laten denken. Dit was vooral bij het vak HCD het geval, waar ik me ging verdiepen in één persoon en een nieuw perspectief kreeg op de het vak webdesign. Verder was het een goede ervaring om echt in een studio model te werken, maar ben ik nu ook wel toe aan vakantie. Ik kan schoolopdrachten niet zo goed op school laten, waardoor ik er meer mee bezig was dan goed is. Maar ik heb wel het uiterste uit mezelf gehaald en mezelf uit blijven dagen, en daar ben ik heel trots op. 
+
+**Reflectie op Meesterproef**
+
+Helaas kon ik tijdens de Meesterproef niet erg focussen of in kleine mate op twee van mijn leerdoelen. Bij het leerdoel over de mobiele telefoon was dit vanaf week 1 al duidelijk, waardoor ik wel op zoek kon naar een ander leerdoel. Wat namelijk ook duidelijk werd de eerste week is dat ik nog nooit echt heb samengewerkt in groepsverband met code. Daarom was dit voor mij een uitdaging die ik heb op kunnen pikken tijdens de Meesterproef.
+
+De Meesterproef vond ik een complexe en uitdagende opdracht, waarbij ik echt buiten mijn comfortzone heb moeten stappen. Ik had zelf nog niet veel gewerkt met JSON bestanden en tijdens deze opdracht was dit natuurlijk onze basis. Daarom heb ik ook echt een stapje bij moeten zetten in de eerste week, door zelf nog iets meer te oefenen met JSON bestanden. Ook onze JavaScript was vrij complex en uitdagend voor het niveau waarmee ik deze Meesterproef startte. Maar ik ben altijd leergierig en heb me, net als de rest van het groepje, extra ingezet om ons JavaScript niveau te verhogen en het gat tussen ons en Kerr iets te dichten. En ik ben achteraf heel blij dat ik dit heb gedaan. Het ware wat nieuwe dingen voor mij, zoals het gebruike van een classe, maar tegelijkertijd wel hele nuttige kennis om opgedaan te hebben. De opdracht zelf vond ik heel leuk, hoewel ik tegen het einde er wel echt klaar mee was, omdat veel bugs op moesten lossen continu. Het werken met de opdrachtgever verliep heel goed en ze was ontzettend blij met het eindresultaat.
